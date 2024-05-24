@@ -8,7 +8,7 @@ const route = useRoute()
 const getWeatherData = async () => {
   try {
     const weatherData = await axios.get(
-      `http://api.weatherapi.com/v1/forecast.json?key=${WEATHER_API_API}&q=${route.query.lat},${route.query.lng}&days=7&lang=ru`
+      `https://api.weatherapi.com/v1/forecast.json?key=${WEATHER_API_API}&q=${route.query.lat},${route.query.lng}&days=7&lang=ru`
     )
     await new Promise((res) => setTimeout(res, 500))
     return weatherData.data
