@@ -52,6 +52,7 @@ console.log(weatherData)
       <p class="capitalize">
         {{ weatherData.current.condition.text }}
       </p>
+      <p>UV: {{ +weatherData.current.uv }}</p>
       <img class="h-auto" :src="weatherData.current.condition.icon" alt="Weather Icon" />
     </div>
 
